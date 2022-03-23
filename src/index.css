@@ -9,3 +9,13 @@
 body {
   font-family: Montserrat, sans-serif;
 }
+
+.container-pokedex{
+  width: 1440px;
+  height: 1131px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background: url('./style/background.png') transparent 122% -36% no-repeat padding-box;
+  opacity: 1;
+}
