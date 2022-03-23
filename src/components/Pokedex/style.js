@@ -18,8 +18,20 @@ export const CardStyle = styled.div`
   position: relative;
   width: 295px;
 `;
-export const NameStyle = styled.span`
 
+export const NameStyle = styled.span`
+  color: var(--white);
+  font-style: var(--unnamed-font-style-normal) normal;
+  font-weight: var(--unnamed-font-weight-bold); 
+  font-size: var(--unnamed-font-size-25);
+  font-family: var(--unnamed-font-family-montserrat);
+  left: 16px;
+  letter-spacing: var(--unnamed-character-spacing-0);
+  line-height: var(--unnamed-line-spacing-30); 
+  opacity: 1;
+  position: absolute;
+  text-align: left;
+  top: 28px;
 `;
 
 export const TypesStyle = styled.div`
