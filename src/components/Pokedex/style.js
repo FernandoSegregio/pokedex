@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { background, details } from '../../style/cardColorBase';
+import backObj from '../../style/pokemonData';
 
 export const PokedexStyle = styled.div`
   display: grid;
@@ -10,6 +12,7 @@ export const PokedexStyle = styled.div`
 `;
 
 export const CardStyle = styled.div`
+  background-color: ${({defaultValue}) => background[defaultValue]};
   border-radius: 13px;
   box-shadow: 0px 3px 6px #00000029;
   display: flex;
@@ -32,6 +35,7 @@ export const NameStyle = styled.span`
   position: absolute;
   text-align: left;
   top: 28px;
+  background: url(${({defaultValue}) => backObj[defaultValue]};)
 `;
 
 export const TypesStyle = styled.div`
@@ -45,8 +49,8 @@ export const TypesStyle = styled.div`
 `;
 
 export const TypeStyle = styled.span`
+  background-color: ${({defaultValue}) => details[defaultValue]};
   color: var(--white);
-  background: var(--green-200) 0% 0% no-repeat padding-box;
   border-radius: 12px;
   font-family: var(--unnamed-font-family-montserrat);
   font-size: var(--unnamed-font-size-15);
@@ -60,7 +64,7 @@ export const TypeStyle = styled.span`
 `;
 
 export const IdStyle = styled.p`
-  color: var(--green-200);
+  color: ${({defaultValue}) => details[defaultValue]};
   font-style: var(--unnamed-font-style-normal) normal;
   font-weight: var(--unnamed-font-weight-600);
   font-size: var(--unnamed-font-size-16);
