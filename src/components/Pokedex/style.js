@@ -35,7 +35,13 @@ export const NameStyle = styled.span`
 `;
 
 export const TypesStyle = styled.div`
-
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  left: 16px;
+  position: absolute;
+  row-gap: 4px;
+  top: 69px;
 `;
 
 export const TypeStyle = styled.span`
