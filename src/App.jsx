@@ -1,10 +1,11 @@
 import React from 'react';
+import GlobalStyle from './style/GlobalStyle';
 
 function App() {
-	
+    
 	return (
 		<div className="App">
-			Pokedex
+			<GlobalStyle />
 		</div>
 	);
 }
