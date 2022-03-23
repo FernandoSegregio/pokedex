@@ -45,13 +45,41 @@ export const TypesStyle = styled.div`
 `;
 
 export const TypeStyle = styled.span`
-
+  color: var(--white);
+  background: var(--green-200) 0% 0% no-repeat padding-box;
+  border-radius: 12px;
+  font-family: var(--unnamed-font-family-montserrat);
+  font-size: var(--unnamed-font-size-15);
+  font-style: var(--unnamed-font-style-normal) normal;
+  font-weight: var(--unnamed-font-weight-normal);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  line-height: var(--unnamed-line-spacing-19);
+  opacity: 1;
+  padding: 3px 14px;
+  text-align: left;
 `;
 
 export const IdStyle = styled.p`
- 
+  color: var(--green-200);
+  font-style: var(--unnamed-font-style-normal) normal;
+  font-weight: var(--unnamed-font-weight-600);
+  font-size: var(--unnamed-font-size-16);
+  font-family: var(--unnamed-font-family-montserrat);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  line-height: var(--unnamed-line-spacing-19);
+  opacity: 1;
+  position: absolute;
+  right: 30px;
+  text-align: right;
+  top: 14px;
 `;
 
 export const ImgStyle = styled.img`
-
+  height: 170px;
+  opacity: 1;
+  position: absolute;
+  right: 8px;
+  top: 32px;
+  width: 165px;
+  z-index: 2;
 `;
