@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { background, details } from '../../style/cardColorBase';
-import backObj from '../../style/pokemonData';
 
 export const PokedexStyle = styled.div`
   display: grid;
@@ -35,7 +34,6 @@ export const NameStyle = styled.span`
   position: absolute;
   text-align: left;
   top: 28px;
-  background: url(${({defaultValue}) => backObj[defaultValue]};)
 `;
 
 export const TypesStyle = styled.div`
@@ -86,4 +84,11 @@ export const ImgStyle = styled.img`
   top: 32px;
   width: 165px;
   z-index: 2;
+`;
+
+export const ImgBackGroundCardStyle = styled.img`
+  position: absolute;
+  right: 16px;
+  top: 70px;
+  z-index: 0;
 `;
