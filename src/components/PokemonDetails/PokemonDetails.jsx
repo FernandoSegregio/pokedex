@@ -6,7 +6,14 @@ import {
 	ArrowStyle,
 	CarouselStyle,
 	ButtonPokemonSelectStyle,
+	NameStyle,
+	TypeStyle,
+	TypesStyle,
+	ImgBackGroundCardStyle,
+	NameDatailsPokemonStyle,
 } from './style';	
+
+import schemaPokeballColor from '../../style/schemaPokeballColor';
 
 function PokemonDetails() {
 	const [arrayDetails, setArrayDetails] = useState([]);
@@ -31,28 +38,43 @@ function PokemonDetails() {
 		const pokemonRight = arrayPokemons[indexPokemon === 15 ? 0 : indexPokemon + 1].data;
 		
 		setArrayDetails([pokemonLeft, pokemon, pokemonRight]);
-	
+		
 	}, [idPokemonOnClick]);
 
 
 	return (
 		<>
-			<PokemonDetailsContainerStyle>
+			<PokemonDetailsContainerStyle defaultValue={arrayDetails[1] && arrayDetails[1].types[0].type.name}>
 				<ArrowStyle 
 					type='button'
 					onClick={ () => backToPokedex() } />
+				<NameDatailsPokemonStyle>
+					<NameStyle>{arrayDetails[1] && arrayDetails[1].name}</NameStyle>
+					<TypesStyle>
+						{arrayDetails[1] && arrayDetails[1].types.map(({ type }) => {
+							return (
+								<TypeStyle key={`${arrayDetails[1].id}_${type.name}`} defaultValue={arrayDetails[1].types[0].type.name}>
+									{type.name}
+								</TypeStyle>
+							);
+						})}
+					</TypesStyle>
+				</NameDatailsPokemonStyle>
 				<CarouselStyle>
-					{arrayDetails && arrayDetails.map(( {sprites, id} , i ) => {
+					{arrayDetails && arrayDetails.map(( {sprites, id }) => {
 						return (
-							<ButtonPokemonSelectStyle key={ i } onClick={ () => setIdPokemonOnClick(id)}>
+							<ButtonPokemonSelectStyle key={id} onClick={() => setIdPokemonOnClick(id)}>
 								<img src={sprites.other.home.front_default} alt="front-pokemon" />
-							</ButtonPokemonSelectStyle>	
+							</ButtonPokemonSelectStyle>
 						);
-					}
+					},
 					) }
 				</CarouselStyle>	
+				<ImgBackGroundCardStyle
+					src={ arrayDetails[1] && schemaPokeballColor[arrayDetails[1].types[0].type.name]}
+					alt="background-pokebal" />
 				<PokemonDetailsStyle>
-			details
+					informações gereais sobre o pokemon!
 				</PokemonDetailsStyle>
 			</PokemonDetailsContainerStyle>
 		</>
