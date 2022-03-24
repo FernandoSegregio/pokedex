@@ -15,3 +15,13 @@ export async function getListPokemonsApi(limit = itensPage, offset = 0) {
 }
 
 
+export function getPokemon(namePokemon) {
+	try {
+		const pokemonData = api.get(namePokemon);
+		return pokemonData;
+	} catch (error) {
+		console.log('error: ', error);
+	}
+} 
+  
+
