@@ -11,11 +11,13 @@ body {
 }
 
 .container-pokedex{
-  width: 1440px;
-  height: 1131px;
-  margin: auto;
+  background: url('./style/background.png') transparent 122% -36% no-repeat padding-box;
   display: flex;
   flex-direction: column;
-  background: url('./style/background.png') transparent 122% -36% no-repeat padding-box;
+  height: 1131px;
+  margin: auto;
   opacity: 1;
+  position: relative;
+  text-transform: capitalize;
+  width: 1440px;
 }
