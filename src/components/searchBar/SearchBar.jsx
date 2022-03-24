@@ -5,15 +5,16 @@ import { getPokemon } from '../../services/api';
 
 function SearchBar() {
 	const [pokemonName, setPokemonName] = useState('');
-	const { setArrayPokemons, setIsDetailsClick } = useContext(PokedexContext);
+	const { setIdPokemonOnClick, setIsDetailsClick } = useContext(PokedexContext);
     
 	async function getPokemonApi(e){
 		e.preventDefault();
 		const result = await getPokemon(pokemonName);
-		console.log([result]);
-		setArrayPokemons([result]);
+		await setIdPokemonOnClick(result.data.id);
 		setIsDetailsClick(true);
+		
 	}
+
 
 	return (
 		<form onSubmit={ (e) => getPokemonApi(e) }>
