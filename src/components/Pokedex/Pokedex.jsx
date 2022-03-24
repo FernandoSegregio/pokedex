@@ -44,7 +44,7 @@ function Pokedex() {
 								<TypesStyle>
 									{data.types.map(({ type }) => {
 										return (
-											<TypeStyle key={`${data.id}_${data.type}`} defaultValue={data.types[0].type.name}>
+											<TypeStyle key={`${data.id}_${type.name}`} defaultValue={data.types[0].type.name}>
 												{type.name}
 											</TypeStyle>
 										);
