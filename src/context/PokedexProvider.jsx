@@ -7,6 +7,7 @@ function PokedexProvider({ children }) {
 	const [arrayPokemons, setArrayPokemons] = useState([]);
 	const [totalPage, setTotalPage] = useState(0);
 	const [page, setPage] = useState(0);
+	const [isDetailsClick, setIsDetailsClick] = useState(false);
 
 	const pokemonsPerPage = 16;
 	const offetRequest = ( page * pokemonsPerPage);
@@ -32,10 +33,14 @@ function PokedexProvider({ children }) {
 	}, [page]);
 
 	const context = {
-		arrayPokemons,
 		totalPage,
 		page,
+		arrayPokemons,
+		isDetailsClick,
+		setArrayPokemons,
 		setPage,
+		setIsDetailsClick,
+		getPokemonData,
 	};
 
 	return (
