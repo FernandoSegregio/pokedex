@@ -92,3 +92,8 @@ export const ImgBackGroundCardStyle = styled.img`
   top: 70px;
   z-index: 0;
 `;
+
+export const CardButtonPokemonStyle = styled.button`
+  background: transparent;
+  border: none;
+`;
