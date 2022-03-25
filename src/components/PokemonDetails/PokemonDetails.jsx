@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import PokedexContext from '../../context/PokedexContext';
+import { api } from '../../services/api';
 import {
 	PokemonDetailsContainerStyle,
 	PokemonDetailsStyle,
@@ -18,6 +19,9 @@ import {
 	ContainerBreedingStyle,
 	BreedingStyle,
 	GenderStyle,
+	EggStyle,
+	IdStyle,
+	TitleBreegingStyle,
 } from './style';
 
 import schemaPokeballColor from '../../style/schemaPokeballColor';
@@ -26,13 +30,14 @@ import iconFemale from '../../images/icon-female.svg';
 
 function PokemonDetails() {
 	const [arrayDetails, setArrayDetails] = useState([]);
+	const [eggGroup, setEggGroup] = useState('');
 	const {
 		setIsDetailsClick,
 		arrayPokemons,
 		getPokemonData,
 		idPokemonOnClick,
 		setIdPokemonOnClick,
-		gender
+		gender,
 	} = useContext(PokedexContext);
 
 	async function backToPokedex() {
@@ -42,7 +47,6 @@ function PokemonDetails() {
 
 	const indexPokemon = idPokemonOnClick - 1;
 
-
 	useEffect(() => {
 		const pokemonLeft =
 	  arrayPokemons[indexPokemon === 0 ? 15 : indexPokemon - 1].data;
@@ -50,22 +54,39 @@ function PokemonDetails() {
 		const pokemonRight =
 	  arrayPokemons[indexPokemon === 15 ? 0 : indexPokemon + 1].data;
 
-		setArrayDetails([pokemonLeft, pokemon, pokemonRight]);
+		setArrayDetails([pokemonLeft, pokemon, pokemonRight]);	
 		
 	}, [idPokemonOnClick]);
 
+	useEffect(() => {
+		getTypeEgg();
+	}, [arrayDetails]);
+	
+	
+
+	async function getTypeEgg() {
+		if(arrayDetails[1]){
+			const pokemonSpecie  = (arrayDetails[1] && arrayDetails[1].species.url.split('v2', 2)[1]);
+			const { data } = await api.get(pokemonSpecie);
+			setEggGroup(data.egg_groups[0].name);	
+		}
+	}
+
 	const genderOnClick  = (arrayDetails[1] && gender
-		.find((pokemon) => pokemon.pokemon_species.name === arrayDetails[1].name));
+		.find((pokemon) => pokemon
+			.pokemon_species.name === arrayDetails[1].name));
 
 	const female = (arrayDetails[1] && (genderOnClick.rate / 8).toFixed(3) * 100);
 	const male = (100 - female);
-
+	
 	return (
 		<>
 			<PokemonDetailsContainerStyle
 				defaultValue={arrayDetails[1] && arrayDetails[1].types[0].type.name}
 			>
 				<ArrowStyle type="button" onClick={() => backToPokedex()} />
+				<IdStyle defaultValue={arrayDetails[1] && arrayDetails[1].types[0].type.name}
+				>#{arrayDetails[1] && ('000' + Number(arrayDetails[1].id)).slice(-3)}</IdStyle>
 				<NameDatailsPokemonStyle>
 					<NameStyle>{arrayDetails[1] && arrayDetails[1].name}</NameStyle>
 					<TypesStyle>
@@ -112,17 +133,14 @@ function PokemonDetails() {
 						<div>
 							<DetailStyle>
 								{Number(
-									arrayDetails[1] && (arrayDetails[1].weight / 10) * 2.20462
-								).toFixed(1)}{' '}
-				lbs ({Number(arrayDetails[1] && arrayDetails[1].weight / 10)}Kg)
+									arrayDetails[1] && (arrayDetails[1].height * 10) / 2.54).toFixed(2)}pol 
+                ({Number(
+									arrayDetails[1] && (arrayDetails[1].height * 10).toFixed(2))}cm)
 							</DetailStyle>
 							<DetailStyle>
 								{Number(
-									arrayDetails[1] && (arrayDetails[1].height * 10) / 2.54
-								).toFixed(2)}pol 
-                ({Number(
-									arrayDetails[1] && (arrayDetails[1].height * 10
-									).toFixed(2))}cm)
+									arrayDetails[1] && (arrayDetails[1].weight / 10) * 2.20462).toFixed(1)}{' '}
+				lbs ({Number(arrayDetails[1] && arrayDetails[1].weight / 10)}Kg)
 							</DetailStyle>
 
 							<AbilitiesDetailsStyle>
@@ -143,17 +161,23 @@ function PokemonDetails() {
 							</AbilitiesDetailsStyle>
 						</div>
 						<ContainerBreedingStyle>
+							<TitleBreegingStyle>Breeding</TitleBreegingStyle>
 				  			<BreedingStyle>
 							  <DetailTitle>Gender</DetailTitle>
 							  <DetailTitle>Egg Group</DetailTitle>
 						      <DetailTitle>Egg Cycle</DetailTitle>							  
 							  </BreedingStyle>
-							<GenderStyle>
-								<img src={iconMale} alt="" />							
-								<DetailStyle>{ male }%</DetailStyle>
-								<img src={ iconFemale} alt="" />
-								<DetailStyle>{ female }%</DetailStyle>
-							</GenderStyle>
+							<BreedingStyle>
+								<GenderStyle>
+									<img src={iconMale} alt="" />							
+									<DetailStyle>{ male }%</DetailStyle>
+									<img src={ iconFemale} alt="" />
+									<DetailStyle>{ female }%</DetailStyle>
+								</GenderStyle>
+								<EggStyle>
+									<DetailStyle>{eggGroup}</DetailStyle>
+								</EggStyle>			
+							</BreedingStyle>
 						</ContainerBreedingStyle>
 					</DetailsStyle>
 				</PokemonDetailsStyle>

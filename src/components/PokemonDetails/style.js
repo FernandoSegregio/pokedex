@@ -156,7 +156,7 @@ export const BreedingStyle = styled.div`
 
 export const ContainerBreedingStyle = styled.div`
   position: absolute;
-  top: 149px;
+  top: 180px;
   display: flex;
 `;
 
@@ -171,4 +171,37 @@ export const GenderStyle = styled.div`
   margin-left: 20px;
   }
 `;
+
+export const EggStyle = styled.div`
+  position: absolute;
+  left: 120px;
+  top: 32px;
+`;
+
+export const IdStyle = styled.p`
+  color: ${({defaultValue}) => details[defaultValue]};
+  font-style: var(--unnamed-font-style-normal) normal;
+  font-weight: var(--unnamed-font-weight-600);
+  font-size: var(--unnamed-font-size-18);
+  font-family: var(--unnamed-font-family-montserrat);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  line-height: var(--unnamed-line-spacing-22);
+  opacity: 1;
+  position: absolute;
+  right: 30px;
+  text-align: right;
+  top: 14px;
+`;
+
+export const TitleBreegingStyle = styled.h3`
+  position: absolute;
+  top: -30px;
+  font-family: var(--unnamed-font-family-montserrat);
+  font-size: var(--unnamed-font-size-18);
+  font-style: var(--unnamed-font-style-normal) normal;
+  font-weight: var(--unnamed-font-weight-600);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  line-height: var(--unnamed-line-spacing-30); 
+`;
+
 
