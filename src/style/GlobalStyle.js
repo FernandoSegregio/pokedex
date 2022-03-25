@@ -19,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
 --unnamed-line-spacing-15: 15px;
 --unnamed-line-spacing-19: 19px;
 --unnamed-line-spacing-30: 30px;
+--unnamed-line-spacing-40: 40px;
 --unnamed-line-spacing-43: 40px;
 --unnamed-line-spacing-43: 43px;
 --blue-100: #76BDFE;
