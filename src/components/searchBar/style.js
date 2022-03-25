@@ -9,9 +9,9 @@ export const SearchBarStyle = styled.input`
     box-shadow: 0px 3px 6px #00000029;
     display: flex;
     height: 70px;
-    left: 1325px;
+    left: 1390px;
     opacity: 1;
-    position: absolute;
+    position: fixed;
     text-align: left;
     top: 716px;
     width: 70px;
@@ -27,7 +27,7 @@ export const SearchBarStyle = styled.input`
         font-size: var(--unnamed-font-size-16);
         font-style: var(--unnamed-font-style-normal) normal; 
         font-weight: var(--unnamed-font-weight-normal); 
-        left: 1014px;
+        left: 1079px;
         letter-spacing: var(--unnamed-character-spacing-0);
         line-height: var(--unnamed-line-spacing-19);
         padding-left: 37px;
