@@ -45,7 +45,9 @@ export const PokemonDetailsStyle = styled.div`
   width: 1440px;
   bottom: 0;
   border-radius: 45px 45px 0 0;  
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const ArrowStyle = styled.button`
@@ -106,4 +108,44 @@ export const NameDatailsPokemonStyle = styled.div`
   flex-direction: column;
   align-items: center;
   row-gap: 6px;
+`;
+
+export const DetailStyle = styled.span`
+  color: var(--black-200);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--unnamed-font-family-montserrat);
+  font-size: var(--unnamed-font-size-16);
+  font-style:var(--unnamed-font-style-normal) normal;
+  font-weight: var(--unnamed-font-weight-600);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  line-height: var(--unnamed-line-spacing-30); 
+  opacity: 1;
+`;
+
+
+export const AbilitiesDetailsStyle = styled.div`
+  align-items: center;
+  display: flex;
+  column-gap: 6px;
+`;
+
+export const DetailsStyle = styled.div`
+  align-items: flex-start;
+  column-gap: 59px;
+  display: flex;
+  position: absolute;
+  row-gap: 10px;
+  top: 156px;
+`;
+
+export const DetailTitle = styled.p`
+  color: var(--black-200);
+  font-family: var(--unnamed-font-family-montserrat);
+  font-size: var(--unnamed-font-size-16);
+  font-style: var(--unnamed-font-style-normal) normal;
+  font-weight: var(--unnamed-font-weight-normal);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  line-height: var(--unnamed-line-spacing-30); 
+  opacity: 1;
 `;
