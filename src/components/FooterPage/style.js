@@ -12,6 +12,15 @@ export const FooterStyle = styled.footer`
   justify-content: center;
   letter-spacing: var(--unnamed-character-spacing-0);
   padding: 20px;
+
+  @media (max-width: 600px){
+      font-size: var(--unnamed-font-size-20);
+      font-weight: var(--unnamed-font-weight-600);
+      line-height:  var(--unnamed-line-spacing-22); 
+      margin-left: 10px;
+      margin-top: 0px;
+      padding: 10px;
+    }
 `;
 
 export const ButtonStyle = styled.button`
@@ -19,5 +28,10 @@ export const ButtonStyle = styled.button`
   padding: 20px;
   background-color: transparent;
   font-size: 20px;
+
+  @media (max-width: 600px){
+      margin-top: 0px;
+      padding: 0 10px;
+    }
 `;
 
