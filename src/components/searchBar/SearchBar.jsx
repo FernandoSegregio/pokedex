@@ -9,8 +9,9 @@ function SearchBar() {
     
 	async function getPokemon(e){
 		e.preventDefault();
-		const result = await getPokemonApi(pokemonName.toLocaleLowerCase());
-		await setIdPokemonOnClick(result.data.id);
+		const { data }  = await getPokemonApi(pokemonName.toLocaleLowerCase());
+		console.log(data.id);
+		setIdPokemonOnClick(data.id);
 		setIsDetailsClick(true);
 	}
 
