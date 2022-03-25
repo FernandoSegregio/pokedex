@@ -21,3 +21,11 @@ body {
   text-transform: capitalize;
   width: 1440px;
 }
+
+@media (max-width: 600px){
+  .container-pokedex{
+    background: url('./images/background.png') transparent 140% -6% no-repeat padding-box;
+    background-size: 320px;
+    width: 428px;
+  }
+}
