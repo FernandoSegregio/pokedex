@@ -12,5 +12,15 @@ margin-left: 100px;
 margin-top: 41px;
 opacity: 1;
 text-align: left;
+
+    @media (max-width: 600px){
+      font-size: var(--unnamed-font-size-25);
+      font-weight: var(--unnamed-font-weight-bold);
+      line-height:  var(--unnamed-line-spacing-30); 
+      margin-left: 31px;
+      margin-top: 33px;
+    }
+
+
 `;
 
