@@ -45,6 +45,13 @@ export const SearchBarStyle = styled.input`
             filter: brightness(0.75);
         }
     }
+    @media (max-width: 600px){
+        left: 337px;
+        top: 840px;
+        &:focus{ 
+        left: 26px; 
+        }
+    }
 
 `;
 
