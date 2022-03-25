@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import PokedexContext from './PokedexContext';
-import { api, getListPokemonsApi } from '../services/api';
+import { api, getListPokemonsApi, getGenderPokemonApi } from '../services/api';
 
 function PokedexProvider({ children }) {
 	const [arrayPokemons, setArrayPokemons] = useState([]);
@@ -9,6 +9,7 @@ function PokedexProvider({ children }) {
 	const [page, setPage] = useState(0);
 	const [isDetailsClick, setIsDetailsClick] = useState(false);
 	const [idPokemonOnClick, setIdPokemonOnClick] = useState(0);
+	const [gender, setGender] = useState();
 
 	const pokemonsPerPage = 16;
 	const offetRequest = ( page * pokemonsPerPage);
@@ -18,7 +19,7 @@ function PokedexProvider({ children }) {
 			const { results, count } = await getListPokemonsApi(pokemonsPerPage, offetRequest );
 			
 			const promises = results.map(async (pokemon) => {
-				return await api.get(pokemon.url.split('pokemon', 2)[1]);
+				return await api.get(pokemon.url.split('v2', 2)[1]);
 			});
 			const result = await Promise.all(promises);
 			setArrayPokemons(result);
@@ -29,21 +30,32 @@ function PokedexProvider({ children }) {
 		}
 	}
 
+	async function getGenderPokemon() {
+		const {pokemon_species_details} = await getGenderPokemonApi(1);
+		setGender(pokemon_species_details);
+	}
+
 	useEffect(() => {
 		getPokemonData();
 	}, [page]);
 
+
+	useEffect(() => {
+		getGenderPokemon();
+	}, []);
+
 	const context = {
-		totalPage,
-		page,
 		arrayPokemons,
-		isDetailsClick,
+		gender,
 		idPokemonOnClick,
-		setArrayPokemons,
-		setPage,
-		setIsDetailsClick,
+		isDetailsClick,
+		page,
+		totalPage,
 		getPokemonData,
+		setArrayPokemons,
 		setIdPokemonOnClick,
+		setIsDetailsClick,
+		setPage,
 	};
 
 	return (
