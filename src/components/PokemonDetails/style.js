@@ -8,12 +8,11 @@ export const PokemonDetailsContainerStyle = styled.div`
 `;
 
 export const ButtonPokemonSelectStyle = styled.button`
-     
     border: none;
     background: transparent;
     cursor: pointer;
     &:nth-child(odd){
-      opacity: 0.6;
+      opacity: 0.5;
       position: relative;
       top: -26px;
     }
@@ -23,19 +22,47 @@ export const ButtonPokemonSelectStyle = styled.button`
       }
     }
     
-
     img {
       height: 210px;
     }
+
+    @media (max-width: 600px){
+      
+      &:nth-child(odd){
+      opacity: 0.4;
+      position: relative;
+      top: -20px;
+      margin: -40px;
+      
+    }
+    &:nth-child(even){
+      img{
+        height: 240px;
+        position: relative;
+        top: 20px;
+      }
+    }
+    img {
+      height: 140px;
+    }
+    
+    }
+
 
 `;
 
 export const CarouselStyle = styled.div`
   display: flex;
-    justify-content: center;
-    position: relative;
-    top: 100px;
-    z-index: 2;    
+  justify-content: center;
+  position: relative;
+  top: 100px;
+  z-index: 2; 
+  
+    @media (max-width: 600px){
+      
+     top: 220px; 
+    
+    }
 `;
 
 export const PokemonDetailsStyle = styled.div`
@@ -48,6 +75,12 @@ export const PokemonDetailsStyle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 600px){
+      width: 428px;
+      height: 425px;
+    }
+
 `;
 
 export const ArrowStyle = styled.button`
@@ -59,6 +92,11 @@ export const ArrowStyle = styled.button`
   position: absolute;
   top: 25px;
   left: 35px;
+
+  @media (max-width: 600px){
+      width: 27px;
+      height: 23px;
+    }
 `;
 
 export const TypesStyle = styled.div`
@@ -90,6 +128,10 @@ export const NameStyle = styled.span`
   letter-spacing: var(--unnamed-character-spacing-0);
   line-height: var(--unnamed-line-spacing-40); 
   opacity: 1;
+  @media (max-width: 600px){
+     
+
+    }
 `;
 export const ImgBackGroundCardStyle = styled.img`
   height: 281px;
@@ -98,6 +140,15 @@ export const ImgBackGroundCardStyle = styled.img`
   top: 173px;
   width: 277px;
   z-index: 1;
+
+  @media (max-width: 600px){
+    height: 276px;
+    left: 64px;
+    position: absolute;
+    top: 229px;
+    width: 280px;
+    }
+  
 `;
 
 export const NameDatailsPokemonStyle = styled.div`
@@ -108,6 +159,12 @@ export const NameDatailsPokemonStyle = styled.div`
   flex-direction: column;
   align-items: center;
   row-gap: 6px;
+  
+  @media (max-width: 600px){
+    left: 134px;
+    top: 120px;
+    row-gap: 2px
+    };
 `;
 
 export const DetailStyle = styled.p`
