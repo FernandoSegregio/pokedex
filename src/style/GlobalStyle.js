@@ -8,6 +8,8 @@ const GlobalStyle = createGlobalStyle`
 --unnamed-font-weight-600: 600;
 --unnamed-font-weight-bold: bold;
 --unnamed-font-weight-normal: normal;
+--unnamed-font-size-9: 9px;
+--unnamed-font-size-11: 11px;
 --unnamed-font-size-12: 12px;
 --unnamed-font-size-15: 15px;
 --unnamed-font-size-16: 16px;
@@ -15,7 +17,9 @@ const GlobalStyle = createGlobalStyle`
 --unnamed-font-size-25: 25px;
 --unnamed-font-size-33: 33px;
 --unnamed-font-size-35: 35px;
---unnamed-character-spacing-0: 0px;
+--unnamed-character-spacing-0: 0;
+--unnamed-line-spacing-11: 11px;
+--unnamed-line-spacing-13: 13px;
 --unnamed-line-spacing-15: 15px;
 --unnamed-line-spacing-19: 19px;
 --unnamed-line-spacing-22: 22px;
