@@ -1,7 +1,4 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { getGenderPokemonApi } from '../../services/api';
-
-
 import PokedexContext from '../../context/PokedexContext';
 import {
 	PokemonDetailsContainerStyle,
@@ -18,9 +15,14 @@ import {
 	AbilitiesDetailsStyle,
 	DetailsStyle,
 	DetailTitle,
+	ContainerBreedingStyle,
+	BreedingStyle,
+	GenderStyle,
 } from './style';
 
 import schemaPokeballColor from '../../style/schemaPokeballColor';
+import iconMale from '../../images/icon-male.svg';
+import iconFemale from '../../images/icon-female.svg';
 
 function PokemonDetails() {
 	const [arrayDetails, setArrayDetails] = useState([]);
@@ -52,7 +54,11 @@ function PokemonDetails() {
 		
 	}, [idPokemonOnClick]);
 
-	const genderOnClick  = (arrayDetails[1] && gender.find((pokemon) => pokemon.pokemon_species.name === arrayDetails[1].name));
+	const genderOnClick  = (arrayDetails[1] && gender
+		.find((pokemon) => pokemon.pokemon_species.name === arrayDetails[1].name));
+
+	const female = (arrayDetails[1] && (genderOnClick.rate / 8).toFixed(3) * 100);
+	const male = (100 - female);
 
 	return (
 		<>
@@ -130,13 +136,25 @@ function PokemonDetails() {
 				  			</DetailStyle>
 				  		) : (
 				  			<DetailStyle key={index} className="pokemon-type-text">
-				  				{ability.name}!
+				  				{ability.name}
 				  			</DetailStyle>
 				  		);
 				  })}
 							</AbilitiesDetailsStyle>
 						</div>
-						<p>{ (genderOnClick.rate / 8).toFixed(3) * 100 }</p>
+						<ContainerBreedingStyle>
+				  			<BreedingStyle>
+							  <DetailTitle>Gender</DetailTitle>
+							  <DetailTitle>Egg Group</DetailTitle>
+						      <DetailTitle>Egg Cycle</DetailTitle>							  
+							  </BreedingStyle>
+							<GenderStyle>
+								<img src={iconMale} alt="" />							
+								<DetailStyle>{ male }%</DetailStyle>
+								<img src={ iconFemale} alt="" />
+								<DetailStyle>{ female }%</DetailStyle>
+							</GenderStyle>
+						</ContainerBreedingStyle>
 					</DetailsStyle>
 				</PokemonDetailsStyle>
 			</PokemonDetailsContainerStyle>

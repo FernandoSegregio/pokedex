@@ -110,10 +110,8 @@ export const NameDatailsPokemonStyle = styled.div`
   row-gap: 6px;
 `;
 
-export const DetailStyle = styled.span`
+export const DetailStyle = styled.p`
   color: var(--black-200);
-  display: flex;
-  flex-direction: column;
   font-family: var(--unnamed-font-family-montserrat);
   font-size: var(--unnamed-font-size-16);
   font-style:var(--unnamed-font-style-normal) normal;
@@ -149,3 +147,28 @@ export const DetailTitle = styled.p`
   line-height: var(--unnamed-line-spacing-30); 
   opacity: 1;
 `;
+
+
+export const BreedingStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const ContainerBreedingStyle = styled.div`
+  position: absolute;
+  top: 149px;
+  display: flex;
+`;
+
+export const GenderStyle = styled.div`
+  display: flex;
+  position: absolute;
+  left: 100px;
+  
+  img {
+  transform: rotate(-45deg);
+  height: 24px;
+  margin-left: 20px;
+  }
+`;
+
