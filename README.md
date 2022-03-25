@@ -2,7 +2,8 @@
 
 ## :memo: Descrição
 Projeto consite na criação de uma Pokedex, na versão mobile 428px e versão desktop 1440px.
-Para Criação do projeto, foi utilizada a <a href="https://pokeapi.co/">API</a> e pesquisas no <a href="https://bulbapedia.bulbagarden.net/wiki/Main_Page">Bulbapedia</a>
+
+Para Criação do projeto, foi utilizada a <a href="https://pokeapi.co/">Pokeapi</a> e pesquisas no <a href="https://bulbapedia.bulbagarden.net/wiki/Main_Page">Bulbapedia</a>
 
 ## :wrench: Tecnologias utilizadas
 * Vite
