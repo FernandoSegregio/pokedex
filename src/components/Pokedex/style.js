@@ -14,6 +14,7 @@ export const CardStyle = styled.div`
   background-color: ${({defaultValue}) => background[defaultValue]};
   border-radius: 13px;
   box-shadow: 0px 3px 6px #00000029;
+  text-transform: capitalize;
   display: flex;
   height: 221px;
   opacity: 1;
@@ -97,3 +98,4 @@ export const CardButtonPokemonStyle = styled.button`
   background: transparent;
   border: none;
 `;
+
