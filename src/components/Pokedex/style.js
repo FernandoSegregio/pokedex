@@ -13,7 +13,7 @@ export const PokedexStyle = styled.div`
   @media (max-width: 600px){
     grid-template-columns: repeat(2, 1fr);
     margin-top: 30px;
-    padding: 0 32px;
+    padding: 0 5%;
   }
 `;
 
