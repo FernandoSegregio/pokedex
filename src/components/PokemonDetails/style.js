@@ -69,7 +69,7 @@ export const PokemonDetailsStyle = styled.div`
   background-color: var(--white);
   height: 479px;
   position: absolute;
-  /* width: 100%; */
+  width: 100%;
   bottom: 0;
   border-radius: 45px 45px 0 0;  
   display: flex;
