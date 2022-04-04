@@ -14,6 +14,7 @@ export const PokedexStyle = styled.div`
     grid-template-columns: repeat(2, 1fr);
     margin-top: 30px;
     padding: 0 5%;
+    gap: 10px;
   }
 `;
 
