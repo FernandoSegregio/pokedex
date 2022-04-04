@@ -21,7 +21,7 @@ export const SearchBarStyle = styled.input`
     }
     cursor: pointer;
     &:focus{ 
-        background-position: 95%;
+        background-position: 96.5%;
         color: var(--white);
         font-family: var(--unnamed-font-family-montserrat);
         font-size: var(--unnamed-font-size-16);
@@ -47,11 +47,11 @@ export const SearchBarStyle = styled.input`
     }
     @media (max-width: 600px){
         height: 60px;
-        left: 329px;
+        left: 337px;
         top: 542px;
         width: 60px;
         &:focus{ 
-        left: 18px; 
+        left: 16px; 
         }
     }
 
