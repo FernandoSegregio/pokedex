@@ -5,7 +5,7 @@ export const PokedexStyle = styled.div`
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(4, 1fr);
-  padding: 0 100px;
+  padding: 0 70px;
   place-items: center;
   margin-top: 38px;
 

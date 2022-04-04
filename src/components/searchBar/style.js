@@ -9,11 +9,11 @@ export const SearchBarStyle = styled.input`
     box-shadow: 0px 3px 6px #00000029;
     display: flex;
     height: 70px;
-    left: 1390px;
+    left: 1290px;
     opacity: 1;
     position: fixed;
     text-align: left;
-    top: 716px;
+    top: 520px;
     width: 70px;
     z-index: 3;
     &::placeholder {
