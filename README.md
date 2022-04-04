@@ -21,7 +21,7 @@ git@github.com:FernandoSegregio/pokedex.git
 Logo após o clone, verificar se está na branch main, caso não esteja de um checkout para a mesma e execute o comando abaixo
 
 ```
-$ yarn install
+$ yarn
 $ yarn dev
 ```
 A aplicação é roda no navegador, na porta 3000 com o seguinte endereço: http://localhost:3000
