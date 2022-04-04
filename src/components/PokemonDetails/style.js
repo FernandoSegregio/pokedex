@@ -77,7 +77,7 @@ export const PokemonDetailsStyle = styled.div`
   align-items: center;
 
   @media (max-width: 600px){
-      width: 428px;
+      width: 100%;
       height: 425px;
     }
 

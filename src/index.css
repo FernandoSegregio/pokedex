@@ -26,6 +26,6 @@ body {
   .container-pokedex{
     background: url('./images/background.png') transparent 140% -6% no-repeat padding-box;
     background-size: 320px;
-    width: 428px;
+    width: 100%;
   }
 }
