@@ -23,7 +23,7 @@ export const ButtonPokemonSelectStyle = styled.button`
     }
     
     img {
-      height: 210px;
+      height: 200px;
     }
 
     @media (max-width: 600px){
@@ -37,7 +37,7 @@ export const ButtonPokemonSelectStyle = styled.button`
     }
     &:nth-child(even){
       img{
-        height: 240px;
+        height: 225px;
         position: relative;
         top: 20px;
       }
@@ -77,7 +77,6 @@ export const PokemonDetailsStyle = styled.div`
   align-items: center;
 
   @media (max-width: 600px){
-      width: 100%;
       height: 425px;
     }
 
@@ -142,10 +141,10 @@ export const ImgBackGroundCardStyle = styled.img`
   z-index: 1;
 
   @media (max-width: 600px){
-    height: 276px;
+    height: 226px;
     left: 64px;
     position: absolute;
-    top: 229px;
+    top: 260px;
     width: 280px;
     }
   
