@@ -21,13 +21,13 @@ export const SearchBarStyle = styled.input`
     }
     cursor: pointer;
     &:focus{ 
-        background-position: 96.5%;
+        background-position: 96%;
         color: var(--white);
         font-family: var(--unnamed-font-family-montserrat);
         font-size: var(--unnamed-font-size-16);
         font-style: var(--unnamed-font-style-normal) normal; 
         font-weight: var(--unnamed-font-weight-normal); 
-        left: 1079px;
+        left: 979px;
         letter-spacing: var(--unnamed-character-spacing-0);
         line-height: var(--unnamed-line-spacing-19);
         padding-left: 37px;
