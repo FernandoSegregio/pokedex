@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import PokedexContext from '../../context/PokedexContext';
-import { api } from '../../services/api';
+import { api, getPokemonApi } from '../../services/api';
 import {
 	PokemonDetailsContainerStyle,
 	PokemonDetailsStyle,
@@ -33,7 +33,6 @@ function PokemonDetails() {
 	const [eggGroup, setEggGroup] = useState('');
 	const {
 		setIsDetailsClick,
-		arrayPokemons,
 		getPokemonData,
 		idPokemonOnClick,
 		setIdPokemonOnClick,
@@ -45,25 +44,21 @@ function PokemonDetails() {
 		await getPokemonData();
 	}
 
-	const indexPokemon = idPokemonOnClick - 1;
-
-	useEffect(() => {
-		const pokemonLeft =
-	  arrayPokemons[indexPokemon === 0 ? 15 : indexPokemon - 1].data;
-		const pokemon = arrayPokemons[indexPokemon].data;
-		const pokemonRight =
-	  arrayPokemons[indexPokemon === 15 ? 0 : indexPokemon + 1].data;
-
-		setArrayDetails([pokemonLeft, pokemon, pokemonRight]);	
-		
+	useEffect(async() => {
+		await getCarouselPokemon();		
 	}, [idPokemonOnClick]);
 
 	useEffect(() => {
 		getTypeEgg();
 	}, [arrayDetails]);
-	
-	
 
+	async function getCarouselPokemon() {
+		const pokemonLeft = await getPokemonApi(idPokemonOnClick - 1);
+		const pokemonCenter = await getPokemonApi(idPokemonOnClick);
+		const pokemonRight = await getPokemonApi(idPokemonOnClick + 1);
+		setArrayDetails([pokemonLeft.data, pokemonCenter.data, pokemonRight.data]);
+	}
+	
 	async function getTypeEgg() {
 		if(arrayDetails[1]){
 			const pokemonSpecie  = (arrayDetails[1] && arrayDetails[1].species.url.split('v2', 2)[1]);
@@ -102,7 +97,7 @@ function PokemonDetails() {
 					</TypesStyle>
 				</NameDatailsPokemonStyle>
 				<CarouselStyle>
-					{arrayDetails &&
+					{arrayDetails.length > 0 &&
 			arrayDetails.map(({ sprites, id }) => {
 			    return (
 			        <ButtonPokemonSelectStyle key={id} 
