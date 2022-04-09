@@ -53,9 +53,14 @@ function PokemonDetails() {
 	}, [arrayDetails]);
 
 	async function getCarouselPokemon() {
-		const pokemonLeft = await getPokemonApi(idPokemonOnClick - 1);
+		
+		const pokemonLeft = idPokemonOnClick === 1 
+			? await getPokemonApi(700)
+			: await getPokemonApi(idPokemonOnClick - 1);
 		const pokemonCenter = await getPokemonApi(idPokemonOnClick);
-		const pokemonRight = await getPokemonApi(idPokemonOnClick + 1);
+		const pokemonRight = idPokemonOnClick === 700
+			? await getPokemonApi(1)
+			: await getPokemonApi(idPokemonOnClick + 1);
 		setArrayDetails([pokemonLeft.data, pokemonCenter.data, pokemonRight.data]);
 	}
 	
