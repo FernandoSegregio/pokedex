@@ -43,7 +43,7 @@ export const ButtonPokemonSelectStyle = styled.button`
       }
     }
     img {
-      height: 140px;
+      height: 130px;
     }
     
     }
