@@ -5,6 +5,9 @@ import arrowBack from '../../images/arrow-back.svg';
 export const PokemonDetailsContainerStyle = styled.div`
   background-color: ${({defaultValue}) => background[defaultValue]};
   height: 823px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const ButtonPokemonSelectStyle = styled.button`
@@ -153,14 +156,12 @@ export const ImgBackGroundCardStyle = styled.img`
 export const NameDatailsPokemonStyle = styled.div`
   position: absolute;
   top: 68px;
-  left: 636px;
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 6px;
   
   @media (max-width: 600px){
-    left: 134px;
     top: 120px;
     row-gap: 2px
     };
