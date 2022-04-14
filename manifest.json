@@ -1,0 +1,16 @@
+{
+  "name": "Nando Pokedex",
+  "short_name": "Pokedex",
+  "theme_color": "#bc1b1b",
+  "background_color": "#fafafa",
+  "icons": [
+    {
+      "src": "src/images/pokedex-512.png",
+      "sizes": "512x512",
+      "type": "image\/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "display": "fullscreen",
+  "start_url": "https://pokedex-fernandosegregio.vercel.app/"
+}
