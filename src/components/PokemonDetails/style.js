@@ -72,6 +72,7 @@ export const PokemonDetailsStyle = styled.div`
   background-color: var(--white);
   height: 479px;
   position: absolute;
+  width: 100%;
   bottom: 0;
   border-radius: 45px 45px 0 0;  
   display: flex;
@@ -246,7 +247,7 @@ export const IdStyle = styled.p`
   position: absolute;
   right: 30px;
   text-align: right;
-  top: 14px;
+  top: 27px;
 `;
 
 export const TitleBreegingStyle = styled.h3`
