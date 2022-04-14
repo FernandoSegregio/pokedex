@@ -47,11 +47,11 @@ export const SearchBarStyle = styled.input`
     }
     @media (max-width: 600px){
         height: 60px;
-        left: 334px;
-        top: 542px;
+        left: 328px;
+        top: 200px;
         width: 60px;
         &:focus{ 
-        left: 13px; 
+        left: 7px; 
         }
     }
 
