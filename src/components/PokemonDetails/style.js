@@ -137,7 +137,6 @@ export const NameStyle = styled.span`
 `;
 export const ImgBackGroundCardStyle = styled.img`
   height: 281px;
-  left: 588px;
   position: absolute;
   top: 173px;
   width: 277px;
