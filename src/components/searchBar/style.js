@@ -7,6 +7,7 @@ export const SearchBarStyle = styled.input`
     background-position: 50%;
     border-radius: 35px;
     box-shadow: 0px 3px 6px #00000029;
+    color: transparent;
     display: flex;
     height: 70px;
     left: 92%;
