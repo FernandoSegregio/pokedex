@@ -144,10 +144,7 @@ export const ImgBackGroundCardStyle = styled.img`
 
   @media (max-width: 600px){
     height: 226px;
-    left: 64px;
-    position: absolute;
     top: 260px;
-    width: 280px;
     }
   
 `;
