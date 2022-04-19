@@ -9,11 +9,11 @@ export const SearchBarStyle = styled.input`
     box-shadow: 0px 3px 6px #00000029;
     display: flex;
     height: 70px;
-    left: 1290px;
+    left: 92%;
     opacity: 1;
     position: fixed;
     text-align: left;
-    top: 520px;
+    top: 80%;
     width: 70px;
     z-index: 3;
     &::placeholder {
@@ -21,13 +21,13 @@ export const SearchBarStyle = styled.input`
     }
     cursor: pointer;
     &:focus{ 
-        background-position: 96%;
+        background-position: 95%;
         color: var(--white);
         font-family: var(--unnamed-font-family-montserrat);
         font-size: var(--unnamed-font-size-16);
         font-style: var(--unnamed-font-style-normal) normal; 
         font-weight: var(--unnamed-font-weight-normal); 
-        left: 979px;
+        left: calc(96.5% - 381px);
         letter-spacing: var(--unnamed-character-spacing-0);
         line-height: var(--unnamed-line-spacing-19);
         padding-left: 37px;
