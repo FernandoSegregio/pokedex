@@ -10,7 +10,7 @@ export const SearchBarStyle = styled.input`
     color: transparent;
     display: flex;
     height: 70px;
-    right: 3%;
+    right: 2.5%;
     opacity: 1;
     position: fixed;
     text-align: left;
@@ -32,7 +32,7 @@ export const SearchBarStyle = styled.input`
         line-height: var(--unnamed-line-spacing-19);
         padding-left: 37px;
         text-align: left;
-        width: 381px;
+        width: 30%;
         &::placeholder {
             color: var(--white);
             font-family: var(--unnamed-font-family-montserrat);
@@ -49,6 +49,9 @@ export const SearchBarStyle = styled.input`
         height: 60px;
         top: 200px;
         width: 60px;
+        &:focus{
+            width: 95%;
+        }
     }
 
 `;
