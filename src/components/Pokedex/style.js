@@ -27,11 +27,10 @@ export const CardStyle = styled.div`
   height: 221px;
   opacity: 1;
   position: relative;
-  width: 295px;
+  width: 100%;
   
   @media (max-width: 600px){
     height: 129px;
-    width: 172px; 
   }
 `;
 
@@ -157,5 +156,6 @@ export const ImgBackGroundCardStyle = styled.img`
 export const CardButtonPokemonStyle = styled.button`
   background: transparent;
   border: none;
+  width: 90%;
 `;
 
