@@ -3,16 +3,19 @@ import { background, details } from '../../style/cardColorBase';
 
 export const PokedexStyle = styled.div`
   display: grid;
-  gap: 2%;
+  column-gap: 2%;
+  row-gap: 3%;
   grid-template-columns: repeat(4, 1fr);
   padding: 0 70px;
   place-items: center;
   margin: 38px 0;
-
+  
   @media (max-width: 600px){
     grid-template-columns: repeat(2, 1fr);
-    margin: 0 30px;
-    padding: 0 4%;
+    margin: 30px 0;
+    padding: 0 3%;
+    row-gap: 1%;
+    column-gap: 3%;
   }
 `;
 
