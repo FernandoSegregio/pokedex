@@ -3,19 +3,23 @@ import { background, details } from '../../style/cardColorBase';
 
 export const PokedexStyle = styled.div`
   display: grid;
-  gap: 20px;
+  gap: 2%;
   grid-template-columns: repeat(4, 1fr);
   padding: 0 70px;
   place-items: center;
-  margin-top: 38px;
-
+  margin: 38px 0;
 
   @media (max-width: 600px){
     grid-template-columns: repeat(2, 1fr);
-    margin-top: 30px;
+    margin: 0 30px;
     padding: 0 4%;
-    gap: 10px;
   }
+`;
+
+export const CardButtonPokemonStyle = styled.button`
+  background: transparent;
+  border: none;
+  width: 100%;
 `;
 
 export const CardStyle = styled.div`
@@ -153,9 +157,5 @@ export const ImgBackGroundCardStyle = styled.img`
   }
 `;
 
-export const CardButtonPokemonStyle = styled.button`
-  background: transparent;
-  border: none;
-  width: 90%;
-`;
+
 
