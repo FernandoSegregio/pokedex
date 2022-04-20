@@ -11,6 +11,7 @@ export const FooterStyle = styled.footer`
   line-height: var(--unnamed-line-spacing-30); 
   justify-content: center;
   letter-spacing: var(--unnamed-character-spacing-0);
+  margin-top: 70px;
   padding: 20px;
 
   @media (max-width: 600px){
@@ -18,7 +19,7 @@ export const FooterStyle = styled.footer`
       font-weight: var(--unnamed-font-weight-600);
       line-height:  var(--unnamed-line-spacing-22); 
       margin-left: 10px;
-      margin-top: 0px;
+      margin-top: 70px;
       padding: 10px;
     }
 `;
