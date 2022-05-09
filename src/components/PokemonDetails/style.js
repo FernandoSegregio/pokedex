@@ -40,13 +40,13 @@ export const ButtonPokemonSelectStyle = styled.button`
     }
     &:nth-child(even){
       img{
-        height: 225px;
+        height: 215px;
         position: relative;
-        top: 20px;
+        top: 40px;
       }
     }
     img {
-      height: 130px;
+      height: 110px;
     }
     
     }
@@ -63,7 +63,7 @@ export const CarouselStyle = styled.div`
   
     @media (max-width: 600px){
       
-     top: 220px; 
+     top: 178px; 
     
     }
 `;
@@ -80,7 +80,7 @@ export const PokemonDetailsStyle = styled.div`
   align-items: center;
 
   @media (max-width: 600px){
-      height: 425px;
+      height: 446px;
     }
 
 `;
@@ -143,8 +143,8 @@ export const ImgBackGroundCardStyle = styled.img`
   z-index: 1;
 
   @media (max-width: 600px){
-    height: 226px;
-    top: 260px;
+    height: 203px;
+    top: 253px;
     }
   
 `;
@@ -166,7 +166,7 @@ export const NameDatailsPokemonStyle = styled.div`
 export const DetailStyle = styled.p`
   color: var(--black-200);
   font-family: var(--unnamed-font-family-montserrat);
-  font-size: var(--unnamed-font-size-16);
+  font-size: var(--unnamed-font-size-15);
   font-style:var(--unnamed-font-style-normal) normal;
   font-weight: var(--unnamed-font-weight-600);
   letter-spacing: var(--unnamed-character-spacing-0);
@@ -187,7 +187,7 @@ export const DetailsStyle = styled.div`
   display: flex;
   position: absolute;
   row-gap: 10px;
-  top: 156px;
+  top: 125px;
 `;
 
 export const DetailTitle = styled.p`
