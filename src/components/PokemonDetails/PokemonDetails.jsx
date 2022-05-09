@@ -165,7 +165,7 @@ function PokemonDetails() {
 				  			<BreedingStyle>
 							  <DetailTitle>Gender</DetailTitle>
 							  <DetailTitle>Egg Group</DetailTitle>
-						      <DetailTitle>Egg Cycle</DetailTitle>							  
+						      				  
 							  </BreedingStyle>
 							<BreedingStyle>
 								<GenderStyle>
